@@ -31,11 +31,16 @@ class Car extends VehicleModule {
   }
 }
 //this shows how to call from this module...
+//need to add new "constructor" values?
 let v = new VehicleModule.Vehicle(
   "Mecury",
   "Sedan",
   "1965",
   "dirt bag brown",
   "10001"
-);
+)
+
+v.maitLight();
+v.loadPassenger(5);
+
 console.log(v.make);
