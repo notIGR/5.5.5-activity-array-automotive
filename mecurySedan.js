@@ -19,6 +19,10 @@ class Car extends VehicleModule {
   }
   loadPassenger(num) {
       if(this.passenger > this.maximumPassengers) {
+          if((num + this.passenger) <= this.maximumPassengers) {
+              this.passenger = num
+              console.log(this.passenger)
+          }
           console.log('too many passangers')
       }
   }
