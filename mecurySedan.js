@@ -1,7 +1,7 @@
 //this includes the vehicle class as a module
 const VehicleModule = require("./vehicle");
 
-class VehicleProperties extends VehicleModule {
+class Car extends VehicleModule {
     constructor(make, model, year, color, mileage) {
         super(make, model, year, color, mileage);
     this.maximumPassengers;
@@ -12,10 +12,14 @@ class VehicleProperties extends VehicleModule {
     this.scheduleService;
   }
   loadPassenger() {
-
+      if(this.passenger > this.maximumPassengers) {
+          console.log('too many passangers')
+      }
   }
-  scheduleService() {
-
+  maitLight() {
+    if(this.mileage > 10000) {
+        console.log('Schedule Service')
+    }
   }
 }
 //this shows how to call from this module...
