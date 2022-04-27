@@ -30,6 +30,7 @@ class Car extends VehicleModule {
       }
   }
 }
+}
 //this shows how to call from this module...
 //need to add new "constructor" values?
 let v = new VehicleModule.Vehicle(
