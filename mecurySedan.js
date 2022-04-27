@@ -41,6 +41,8 @@ let v = new VehicleModule.Vehicle(
   "10001"
 )
 
+v.start(); //already defined in vehicle.js
+v.stop(); //already defined in vehicle.js
 v.maitLight();
 v.loadPassenger(5);
 
