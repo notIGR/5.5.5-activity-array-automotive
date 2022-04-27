@@ -14,16 +14,19 @@ class Car extends VehicleModule {
   maitLight() {
     if(this.mileage >= 10000) {
         this.scheduleService = true
-        console.log('Schedule Service')
+        //console.log('Schedule Service') i dont have anyt vale at the end of this function
+        return this.scheduleService;
     }
   }
   loadPassenger(num) {
-      if(this.passenger > this.maximumPassengers) {
+      if(this.passenger < this.maximumPassengers) {
           if((num + this.passenger) <= this.maximumPassengers) {
               this.passenger = num
-              console.log(this.passenger)
-          }
-          console.log('too many passangers')
+              return this.passenger;
+              //console.log(this.passenger) again, no value after function runs... whateever number is entered BECOMES this.passagner, then checks against this.max
+          } 
+          else {
+          console.log(this.make + " "+ this.make + 'will not fit that many passengers.')
       }
   }
 }
@@ -32,7 +35,7 @@ let v = new VehicleModule.Vehicle(
   "Mecury",
   "Sedan",
   "1965",
-  "color",
-  "mileage"
+  "dirt bag brown",
+  "10001"
 );
 console.log(v.make);
