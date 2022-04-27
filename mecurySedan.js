@@ -4,12 +4,12 @@ const VehicleModule = require("./vehicle");
 class Car extends VehicleModule {
     constructor(make, model, year, color, mileage) {
         super(make, model, year, color, mileage);
-    this.maximumPassengers;
-    this.passenger;
-    this.numberOfWheels;
-    this.maximumSpeed;
-    this.fuel;
-    this.scheduleService;
+    this.maximumPassengers = 5;
+    this.passenger = 0;
+    this.numberOfWheels= 4;
+    this.maximumSpeed = 200;
+    this.fuel = 100;
+    this.scheduleService = 10000;
   }
   loadPassenger() {
       if(this.passenger > this.maximumPassengers) {
