@@ -1,5 +1,5 @@
 //this includes the vehicle class as a module
-const VehicleModule = require("./vehicle");
+const VehicleModule = require("./vehicle").Vehicle;
 
 class Car extends VehicleModule {
   constructor(make, model, year, color, mileage) {
@@ -12,7 +12,7 @@ class Car extends VehicleModule {
     this.scheduleService = false;
   }
   maitLight() {
-    if (this.mileage >= 10000) {
+    if (this.mileage > 10000) {
       this.scheduleService = true;
       //console.log('Schedule Service') i dont have anyt vale at the end of this function
       return this.scheduleService;
@@ -26,7 +26,7 @@ class Car extends VehicleModule {
         //console.log(this.passenger) again, no value after function runs... whateever number is entered BECOMES this.passagner, then checks against this.max
       } else {
         console.log(
-          this.make + " " + this.make + "will not fit that many passengers."
+          this.model + " " + this.make + "will not fit that many passengers."
         );
       }
     }
@@ -34,9 +34,9 @@ class Car extends VehicleModule {
 }
 //this shows how to call from this module...
 //need to add new "constructor" values?
-let v = new VehicleModule.Vehicle(
+const myCar = new Car(
   "Mecury",
-  "Sedan",
+  "crosstreck",
   "1965",
   "dirt bag brown",
   "10001"
