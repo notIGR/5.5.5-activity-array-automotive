@@ -42,9 +42,9 @@ const myCar = new Car(
   "10001"
 );
 
-v.start(); //already defined in vehicle.js
-v.stop(); //already defined in vehicle.js
-v.maitLight();
-v.loadPassenger(5);
+myCar.start(); //already defined in myCarehicle.js
+myCar.stop(); //already defined in myCarehicle.js
+myCar.maitLight();
+myCar.loadPassenger(5);
 
-console.log(v.make);
+console.log(myCar.make);
